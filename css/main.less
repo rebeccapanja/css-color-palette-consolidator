@@ -1,0 +1,58 @@
+@import "mixins.less";
+
+body {
+  background-color: #FFF; 
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding: 4em;
+}
+h1, h2 {
+  font-weight: normal;
+}
+button {
+  font-size: 1.5em;
+}
+
+textarea {
+  width: 99%;
+  height: 10em;
+}
+
+.color {
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.1);
+  height: 60px;
+  cursor: pointer;
+}
+
+.color em {
+  font-size: .8em;
+  font-style: normal;
+  position: absolute;
+  top: -100em;
+  margin-top: -2em;
+  padding: .2em;
+  background: rgba(255,255,255,.7);
+}
+
+.color:hover {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5); 
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+}
+
+.color:hover em {
+  top: auto;
+}
+
+br {
+  display: none;
+}
+
+footer,
+footer a {
+  color: #777;
+}
