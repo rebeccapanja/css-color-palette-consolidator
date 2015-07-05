@@ -20,8 +20,16 @@ textarea {
 .color {
   display: inline-block;
   border: 1px solid rgba(0,0,0,.1);
-  height: 60px;
+  width: 80px;
+  margin-bottom: 3em;
   cursor: pointer;
+  position: relative;
+
+  .count {
+    position: absolute;
+    bottom: -2em;
+    left: 40%;
+  }
 }
 
 .color em {
@@ -34,25 +42,12 @@ textarea {
   background: rgba(255,255,255,.7);
 }
 
-.color:hover {
-  -moz-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  -o-transform: scale(1.5); 
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transition: all 0.1s ease-in;
-  -moz-transition: all 0.1s ease-in;
-}
-
 .color:hover em {
   top: auto;
-}
-
-br {
-  display: none;
 }
 
 footer,
 footer a {
   color: #777;
+  margin-top: 6em; 
 }
