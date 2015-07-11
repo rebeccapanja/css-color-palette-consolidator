@@ -15,26 +15,29 @@
   </head>
 
   <body>
-    <h1>CSS Color Palette extractor</h1>
+  <div class="container">
+    <h1>CSS Color Palette Consolidator</h1>
     <textarea id="source" placeholder="Paste your CSS code here"></textarea><br>
-    <button class="extract">Extract colors</button>
-    <!-- Temporary workflow -->
-    <p>Instructions:</p>
-    <p>Step 1 :Once you've extracted the colors, click on the ones you would like to consolidate and click "Consolidate selected ones".</p>
-    <p>Step 2: Select the color you'd like to replace these other ones with, and hit "Replace".</p>
-    
+    <button class="btn btn-info extract">Extract colors</button>
 
-    <h2>Greyscale</h2>
-    <div id="bw">-</div>
-    <h2>Colors</h2>
-    <div id="colors">-</div>
+    <div class="color-palette">
+      <h2>Greyscale</h2>
+      <div id="bw">-</div>
+      <h2>Colors</h2>
+      <div id="colors">-</div>
 
-    <button class="select">Ready to pick replacement color</button>
-    <button class="replace">Replace</button>
+      <!-- Temporary workflow -->
+      <p>Click on some colors you'd like to replace, then hit the button.</p>
+      
+
+      <button class="btn btn-info select">Ready to pick replacement color</button>
+      <button class="btn btn-info replace">Replace</button>
+    </div>
 
     <footer>
       <p>Includes code from <a href="https://github.com/mauricesvay/css-color-palette-extractor">github.com/mauricesvay/css-color-palette-extractor</a>, <a href="http://glazman.org/JSCSSP/">glazman.org/JSCSSP</a> &amp; <a href="https://github.com/brehaut/color-js">github.com/brehaut/color-js</a></p>
     </footer>
+  </div>
 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
