@@ -26,11 +26,23 @@ function extract() {
 
 // Handle click handler for dynamically created colors
 function RefreshClickListener() {
+  var current_color;
   $('.color').off;
 
   $('.color').on('click', function() {
-      selected_colors.push($(this).data('color'));
+    current_color = $(this).data('color');
+    if($(this).hasClass('selected')) {
+      // Remove from array
+      $(this).removeClass('selected');
+      selected_colors.splice(selected_colors.indexOf(current_color), 1);
+      // TODO: update last replacement color too
+    } else {
+      selected_colors.push(current_color);
       $(this).addClass('selected');
+    }
+
+    // Update span replacement-color
+    $('span.replacement-color').text(current_color);
   });
 }
 
@@ -46,6 +58,7 @@ function consolidate() {
     text = newstring;
   });
 
+  $('span.replacement-color').text('last color');
   $('#source').val(text);
   extract();
 }

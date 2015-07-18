@@ -21,17 +21,15 @@
     <button class="btn btn-info extract">Extract colors</button>
 
     <div class="color-palette">
-      <h2>Greyscale</h2>
+      <h3>Greyscale</h3>
       <div id="bw">-</div>
-      <h2>Colors</h2>
+      <h3>Colors</h3>
       <div id="colors">-</div>
 
-      <!-- Temporary workflow -->
-      <p>Click on some colors you'd like to replace, then hit the button.</p>
+      <!-- Temporary workflow. Show what last color is in the array that'll be default replacement color. -->
+      <p>Click on the colors you'd like to consolidate and the last selected one will be used to replace them.</p>
       
-
-      <button class="btn btn-info select">Ready to pick replacement color</button>
-      <button class="btn btn-info replace">Replace</button>
+      <button class="btn btn-info replace">Replace with <span class="replacement-color">last color</span></button>
     </div>
 
     <footer>
