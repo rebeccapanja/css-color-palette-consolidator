@@ -31,15 +31,8 @@ function RefreshClickListener() {
 
   $('.color').on('click', function() {
     current_color = $(this).data('color');
-    if($(this).hasClass('selected')) {
-      // Remove from array
-      $(this).removeClass('selected');
-      selected_colors.splice(selected_colors.indexOf(current_color), 1);
-      // TODO: update last replacement color too
-    } else {
-      selected_colors.push(current_color);
-      $(this).addClass('selected');
-    }
+    selected_colors.push(current_color);
+    $(this).addClass('selected');
 
     // Update span replacement-color
     $('span.replacement-color').text(current_color);
@@ -51,6 +44,7 @@ function consolidate() {
   var end_goal_color = selected_colors.pop();
   var text = $('#source').val();
   var newstring;
+
   $('.selected').each(function(){
     var replace_this = $(this).data('color');
     var regex = new RegExp(replace_this, 'ig');
@@ -66,6 +60,8 @@ function consolidate() {
 $(function() {
   $('.extract').on('click', function() {
     extract();
+    // Collapse Bootstrap panel
+    $('.collapse').collapse('toggle');
   });
 
    $('.replace').on('click', function() {

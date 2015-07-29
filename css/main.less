@@ -12,6 +12,20 @@ body {
 a {
  color: #43464D;
  font-size: 13px;
+
+ &:hover {
+  text-decoration: none;
+ }
+}
+
+.panel .panel-title:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e260";
+  float: right;
+  color: grey;
+}
+.panel .collapsed .panel-title:after {
+  content: "\e259";
 }
 
 button,
@@ -23,7 +37,6 @@ textarea {
 }
 
 nav {
-  display: none;
   margin-top: 2em;
 
   a {
@@ -48,26 +61,31 @@ h3{
   margin: 2em 0 1em 0;
 }
 
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 textarea {
   width: 100%;
   height: 14em;
   padding: 16px 20px;
   line-height: 1.6;
   color: #43464D;
-  border: 1px solid rgba(0,0,0,0.15);
-  .border-radius(4px);
+  border: none;
   .font-smoothing();
   .transition(all 0.1s ease-in-out);
 }
 
 .color-palette {
   display: none;
+  margin: 3em 0;
 }
 
 .color {
   display: inline-block;
   border: 1px solid rgba(0,0,0,.1);
-  width: 80px;
+  width: 70px;
   margin-bottom: 3em;
   cursor: pointer;
   position: relative;
@@ -76,6 +94,7 @@ textarea {
     position: absolute;
     bottom: -2em;
     left: 40%;
+    font-size: 0.8em;
   }
 
   &.selected {
@@ -95,11 +114,4 @@ textarea {
   &:hover em {
     top: auto;
   }
-}
-
-footer,
-footer a {
-  font-size: 13px;
-  color: #777;
-  margin-top: 6em; 
 }

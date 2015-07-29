@@ -16,25 +16,41 @@
 
   <body>
   <div class="container">
+
+    <nav>
+      <a href="https://github.com/rebeccapanja/css-color-palette-consolidator">View docs and code</a>
+    </nav>
+
     <h1>CSS Color Palette Consolidator</h1>
-    <textarea id="source" placeholder="Paste your CSS code here"></textarea><br>
-    <button class="btn btn-info extract">Extract colors</button>
 
-    <div class="color-palette">
-      <h3>Greyscale</h3>
-      <div id="bw">-</div>
-      <h3>Colors</h3>
-      <div id="colors">-</div>
-
-      <!-- Temporary workflow. Show what last color is in the array that'll be default replacement color. -->
-      <p>Click on the colors you'd like to consolidate and the last selected one will be used to replace them.</p>
-      
-      <button class="btn btn-info replace">Replace with <span class="replacement-color">last color</span></button>
+    <div class="panel-group" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <a role="button" data-toggle="collapse" href="#wrapper-source-code">
+          <div class="panel-heading" role="tab">
+            <div class="panel-title">
+              CSS Code
+            </div>
+          </div>
+        </a>
+    
+        <div id="wrapper-source-code" class="panel-collapse collapse in" role="tabpanel">
+          <div class="panel-body">
+            <textarea id="source" placeholder="Paste CSS code here"></textarea><br>
+            <button class="btn btn-info extract">Extract colors</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <footer>
-      <p>Includes code from <a href="https://github.com/mauricesvay/css-color-palette-extractor">github.com/mauricesvay/css-color-palette-extractor</a>, <a href="http://glazman.org/JSCSSP/">glazman.org/JSCSSP</a> &amp; <a href="https://github.com/brehaut/color-js">github.com/brehaut/color-js</a></p>
-    </footer>
+    <div class="color-palette">
+      <p>Click on the colors you'd like to consolidate and the last selected one will be used to replace them. Your CSS in the textbox will be updated to reflect this, so you can grab it any time.</p>
+      <h5>Greyscale</h5>
+      <div id="bw">-</div>
+      <h5>Colors</h5>
+      <div id="colors">-</div>
+
+      <button class="btn btn-info replace">Replace with <span class="replacement-color">last color</span></button>
+    </div>
   </div>
 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
