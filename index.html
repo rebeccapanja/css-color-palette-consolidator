@@ -23,28 +23,27 @@
 
     <h1>CSS Color Palette Consolidator</h1>
 
-    <div class="panel-group" role="tablist" aria-multiselectable="true">
-      <div class="panel panel-default">
-        <a role="button" data-toggle="collapse" href="#wrapper-source-code">
-          <div class="panel-heading" role="tab">
-            <div class="panel-title">
-              CSS Code
-            </div>
+    <div class="panel panel-default">
+      <a data-toggle="collapse" href="#wrapper-source-code">
+        <div class="panel-heading">
+          <div class="panel-title">
+            CSS Code
           </div>
-        </a>
-    
-        <div id="wrapper-source-code" class="panel-collapse collapse in" role="tabpanel">
-          <div class="panel-body">
-            <textarea id="source" placeholder="Paste CSS code here"></textarea><br>
-            <button class="btn btn-info extract">Extract colors</button>
-          </div>
+        </div>
+      </a>
+  
+      <div id="wrapper-source-code" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <textarea id="source" placeholder="Paste CSS code here"></textarea><br>
+          <button class="btn btn-info extract">Extract colors</button>
         </div>
       </div>
     </div>
 
     <div class="color-palette">
-      <p>Click on the colors you'd like to consolidate and the last selected one will be used to replace them. Your CSS in the textbox will be updated to reflect this, so you can grab it any time.</p>
-      <h5>Greyscale</h5>
+      <p>Click on the colors you'd like to consolidate and the last selected one will be used to replace them. The CSS code above will be updated, so you can grab it at any time!</p>
+
+      <h5 class="greyscale">Greyscale</h5>
       <div id="bw">-</div>
       <h5>Colors</h5>
       <div id="colors">-</div>
